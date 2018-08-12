@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{40
 		..\..\..\..\Program Files (x86)\Gatherer Extractor\MagicTG_DB_Main.xml = ..\..\..\..\Program Files (x86)\Gatherer Extractor\MagicTG_DB_Main.xml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTG_Card_ScannerTests", "MTG_Card_ScannerTests\MTG_Card_ScannerTests.csproj", "{24BBAB20-7E54-4871-9A34-EBD394469EA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{6B761FE8-8D18-49B6-BEF8-49AED5F3991C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B761FE8-8D18-49B6-BEF8-49AED5F3991C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B761FE8-8D18-49B6-BEF8-49AED5F3991C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24BBAB20-7E54-4871-9A34-EBD394469EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24BBAB20-7E54-4871-9A34-EBD394469EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24BBAB20-7E54-4871-9A34-EBD394469EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24BBAB20-7E54-4871-9A34-EBD394469EA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
