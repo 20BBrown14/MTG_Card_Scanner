@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTG_Card_Scanner", "MTG_Card_Scanner.csproj", "{6B761FE8-8D18-49B6-BEF8-49AED5F3991C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{FFB9FF7C-B942-4DA5-90F2-40CF6C20ADD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{403AB5FF-07B2-4092-A641-44160A54623B}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Program Files (x86)\Gatherer Extractor\MagicTG_DB_Main.xml = ..\..\..\..\Program Files (x86)\Gatherer Extractor\MagicTG_DB_Main.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +25,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{403AB5FF-07B2-4092-A641-44160A54623B} = {FFB9FF7C-B942-4DA5-90F2-40CF6C20ADD7}
 	EndGlobalSection
 EndGlobal

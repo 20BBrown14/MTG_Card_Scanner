@@ -15,6 +15,8 @@ namespace MTG_Card_Scanner
         public Form1()
         {
             InitializeComponent();
+            MagicDB_Parse_xml database = new MagicDB_Parse_xml();
+            database.LoadDB();
         }
     }
 }
