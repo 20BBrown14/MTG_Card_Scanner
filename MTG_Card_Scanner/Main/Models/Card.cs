@@ -8,7 +8,12 @@ using static MTG_Card_Scanner.CodeContract;
 
 namespace MTG_Card_Scanner
 {
-    class Card
+    /// <summary>
+    /// Card model to hold information regarding an MTG card.
+    /// 
+    /// Author: Branden Brown
+    /// </summary>
+    public class Card
     {
         /// <summary>
         /// The name of card
@@ -33,8 +38,8 @@ namespace MTG_Card_Scanner
         /// <param name="cardNumber">The card number of this card.</param>
         public Card (string name, string set, string cardNumber)
         {
-            Requires<ArgumentNullException>(!String.IsNullOrEmpty(name), "name cannot be null or empty");
-            Requires<ArgumentNullException>(!String.IsNullOrEmpty(set), "set cannot be null or empty");
+            Requires<ArgumentNullException>(String.IsNullOrEmpty(name), "name cannot be null or empty");
+            Requires<ArgumentNullException>(String.IsNullOrEmpty(set), "set cannot be null or empty");
             this.Name = name;
             this.Set = set;
             this.CardNumber = cardNumber;
