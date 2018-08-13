@@ -70,6 +70,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Main\Models\CardTests.cs" />
+    <Compile Include="Main\Models\MTGSetTests.cs" />
     <Compile Include="Main\Service\MagicDB_Parse_xmlTests.cs" />
     <Compile Include="Main\Util\CodeContractTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

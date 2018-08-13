@@ -24,10 +24,9 @@ namespace MTG_Card_Scanner
         /// </summary>
         public XmlDocument xmlDatabase { get; }
 
-        /// <summary>
-        /// The card list.
-        /// </summary>
         public List<Card> cardList { get; }
+
+        public List<MTGSet> setList { get; }
 
         public string xmlDatabasePath { get; }
 
@@ -40,6 +39,7 @@ namespace MTG_Card_Scanner
         {
             xmlDatabase = new XmlDocument();
             cardList = new List<Card>();
+            setList = new List<MTGSet>();
             xmlDatabasePath = "../../Main/Resources/Database/MagicTG_DB_Main.xml";
         }
 
@@ -53,6 +53,7 @@ namespace MTG_Card_Scanner
                 file cannot be null or empty");
             xmlDatabase = new XmlDocument();
             cardList = new List<Card>();
+            setList = new List<MTGSet>();
             this.xmlDatabasePath = xmlDatabasePath;
         }
 
@@ -60,7 +61,7 @@ namespace MTG_Card_Scanner
         /// Loads the card database from the xml file
         /// </summary>
         /// <returns>A List<Card> of the cards loaded.</Card></returns>
-        public List<Card> LoadDB()
+        public List<Card> LoadCards()
         {
             xmlDatabase.Load(xmlDatabasePath);
             XmlNodeList cards = xmlDatabase.GetElementsByTagName("card");
@@ -73,6 +74,25 @@ namespace MTG_Card_Scanner
             _log.Info("Loaded Cards Successfully");
             return cardList;
             
+        }
+
+        /// <summary>
+        /// Loads the set database from the xml file.
+        /// </summary>
+        /// <returns>A List<MTGSet> of the sets loaded.</returns>
+        public List<MTGSet> LoadSets()
+        {
+            xmlDatabase.Load(xmlDatabasePath);
+            XmlNodeList sets = xmlDatabase.GetElementsByTagName("sets")[0].ChildNodes;
+
+            for(int i = 0; i < sets.Count; i++)
+            {
+                XmlNode currentSet = sets[i];
+                MTGSet newSet = new MTGSet(currentSet["name"].InnerText, currentSet["code"].InnerText);
+                setList.Add(newSet);
+            }
+            _log.Info("Loaded Sets Successfully");
+            return setList;
         }
 
     }
